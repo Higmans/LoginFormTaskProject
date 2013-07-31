@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity"
+                android:paddingLeft="40dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="5"
+                        android:rowCount="5"
+                        android:id="@+id/gridLayout"
+                        android:layout_gravity="top">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/textViewLogin"
+                            android:id="@+id/textView3"
+                            android:layout_row="0"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="20dp"/>
+
+                    <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/editText2"
+                            android:ems="12"
+                            android:layout_row="0"
+                            android:layout_column="1"
+                            android:layout_columnSpan="2"
+                            android:inputType="text"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/textViewPassword"
+                            android:id="@+id/textView4"
+                            android:layout_row="1"
+                            android:layout_column="0"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="20dp"/>
+
+                    <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:ems="12"
+                            android:id="@+id/editText"
+                            android:layout_row="1"
+                            android:layout_column="1"
+                            android:layout_columnSpan="2"/>
+
+                    <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/checkBoxRememberMe"
+                            android:id="@+id/checkBox"
+                            android:layout_row="2"
+                            android:layout_column="1"/>
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_row="3"
+                            android:layout_rowSpan="2"
+                            android:layout_column="0"
+                            android:layout_columnSpan="4">
+
+                        <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/textViewCountry"
+                                    android:id="@+id/textView5"/>
+
+                            <Spinner
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/spinner"
+                                    android:layout_marginLeft="10dp"
+                                    android:entries="@array/countries"/>
+                        </LinearLayout>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="@string/textViewDeveloper"
+                                android:id="@+id/textView6"/>
+
+                        <RadioGroup
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                            <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/radioButtonAndroid"
+                                    android:id="@+id/radioButton"/>
+
+                            <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/radioButtonIos"
+                                    android:id="@+id/radioButton2"/>
+
+                            <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/radioButtonWP"
+                                    android:id="@+id/radioButton3"/>
+                        </RadioGroup>
+
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/buttonEnter"
+                                android:id="@+id/buttonEnter"
+                                android:layout_gravity="center_horizontal"
+                                android:paddingLeft="40dp"
+                                android:paddingRight="40dp"/>
+                    </LinearLayout>
+
+                </GridLayout>
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|bottom"
+                        android:layout_gravity="center">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/textViewForgotPassword"
+                            android:id="@+id/textView"
+                            android:layout_gravity="center_horizontal|bottom"
+                            />
+
+                    <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/buttonGeneratePassword"
+                            android:id="@+id/buttonGeneratePassword"
+                            android:onClick="onClick"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/generatedPassword"
+                            android:focusable="true"/>
+                </LinearLayout>
+            </LinearLayout>
+    </ScrollView>
+</RelativeLayout><!-- From: file:/C:/Users/Lungo/AndroidStudioProjects/LoginFormTaskProject/LoginFormTask/src/main/res/layout-land/activity_main.xml -->
